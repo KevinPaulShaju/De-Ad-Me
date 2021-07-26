@@ -9,6 +9,9 @@ dotenv.config();
 
 app.use(cors());
 app.use(express.json());
+app.get("/",(req, res) =>{
+  res.send("<h1>Hellow World !</h1>")
+})
 app.use("/api/schedules", scheduleRoutes);
 app.use("/api/restrictions", restrictionsRouter);
 
